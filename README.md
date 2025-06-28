@@ -1,15 +1,18 @@
 # Capstone-Project-2
 Let's dive right into Sql! Shall we?
 
-#KULTRA MEGA STORES INVENTORY#
-## Project Overview ##
-- 
--
--
-### Data Source ### Provided by DSA
-### Tools Used ###
+## PROJECT TOPIC: MEGA STORES INVENTORY
+### Project Overview 
+
+
+
+#### Data Source: Provided by DSA
+#### Tools Used 
  - MS Excel for data cleansing
- - SQL Sever for query and analysis
+    -For data collection
+    -For data manipulation
+    -For data munching
+ - SQL Sever for querying and analysis
 
 create database capstone_project
 
