@@ -50,4 +50,52 @@ ORDER BY Profit ASC
 ---- The unit price can be reduced to increase quantity of goods being bought.
 ---- Shipping cost
 
+----5. KMS incurred the most shipping cost using which shipping method?
+Select Shipping_Cost, Ship_Mode from [dbo].[KMS Sql Case Study]
+where shipping_cost = (select  Max(shipping_cost) as Max_shipping_Cost from [dbo].[KMS Sql Case Study])
 
+---Case Scenario II--
+
+--6. Who are the most valuable customers, and what products or services do they typically purchase? 
+select * from [dbo].[KMS Sql Case Study]
+select Top 5 Profit, sales, Product_Name, Customer_Name
+FROM [dbo].[KMS Sql Case Study]
+ORDER BY Profit DESC
+
+---Select Top 5 sales, Product_Name,Customer_Name
+---FROM [dbo].[KMS Sql Case Study] where Customer_Name = 'Jasper Cacioppo'
+
+---Select Top 5 sales, Product_Name,Customer_Name
+FROM [dbo].[KMS Sql Case Study] where Customer_Name = 'Jasper Cacioppo'
+
+
+---7. Which small business customer had the highest sales?
+Select Top 1 Customer_Name, SUM(Sales) AS Total_Sales
+FROM [dbo].[KMS Sql Case Study]
+WHERE Customer_Segment = 'Small Business'
+GROUP BY Customer_Name
+ORDER BY Total_Sales DESC
+
+---8. Which Corporate placed the most number of orders in 2009-2012?
+SELECT Top 1 Customer_Name, COUNT(Order_ID) AS Order_Count
+FROM [dbo].[KMS Sql Case Study]
+WHERE Customer_Segment = 'Corporate'
+GROUP BY Customer_Name
+ORDER BY Order_Count DESC
+
+---9. Which consumer customer was the most profitable one?
+SELECT Top 1 Customer_Name, SUM(Profit) AS Total_Profit
+FROM [dbo].[KMS Sql Case Study]
+WHERE Customer_Segment = 'Consumer'
+GROUP BY Customer_Name
+ORDER BY Total_Profit DESC
+
+---10. Which customer returned items, and what segment do they belong to?
+
+
+
+---11. If the delivery truck is the most economical but the slowest shipping method and Express Air is the fastest but the slowest shipping method and Express Air is the fastest but the most expensive one, do you think the company appropriately spent shipping costs based on the Order Priority? Explain your answer
+Select Ship_mode, order_priority, shipping_cost, order_date, ship_date from [dbo].[KMS Sql Case Study]
+order by shipping_cost DESC
+
+````````CASE CLOSED!
