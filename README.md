@@ -3,11 +3,11 @@ Let's dive right into Sql! Shall we?
 
 ## PROJECT TOPIC: BUSINESS INTELLIGENCE ANALYSIS FOR KULTRA MEGA STORES(KMS)
 ### Project Overview 
-#### Data Source: An Excel dataset containing detailed order records spanning 2008-2012. **Provided by DSA*
-####Objectives:
+#### Data Source: An Excel dataset containing detailed order records spanning 2008-2012. *Provided by DSA*
+#### Objectives:
  - Clean, transform, and structure the data for analysis.
  - Use SQL querying techniques to extract  trends, metrics, and performance indicators.
-####Approach
+#### Approach
  - Data Preparation
  - Exploratory Analysis
  - SQL-Based Analysis
